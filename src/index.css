@@ -1,0 +1,87 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+@layer base {
+  h1 {
+    @apply text-3xl font-bold mb-4;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold mb-3;
+  }
+
+  h3 {
+    @apply text-xl font-medium mb-2;
+  }
+
+  p {
+    @apply mb-4;
+  }
+} 
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000;
+}
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+/* index.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Glowing effect for icons */
+.glowing-icon {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 0px transparent);
+}
+.glowing-icon:hover {
+  filter: drop-shadow(0 0 8px orange);
+}
+/* styles.css */
+::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 8px #ff6a00, 0 0 12px #f9d423;
+  }
+  100% {
+    box-shadow: 0 0 16px #ff6a00, 0 0 24px #f9d423;
+  }
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+html {
+  scroll-behavior: smooth;
+}
